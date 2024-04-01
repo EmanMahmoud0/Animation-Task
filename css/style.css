@@ -1,0 +1,221 @@
+/* Reset css and Global Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: #0c2e43 url(../images/background.png);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+section{
+    min-height: 100vh;
+    text-align: center;
+}
+/* End Global Styles.................... */
+/* Start header style........................... */
+header{
+    background-color: #16567e;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 5px 75px #c2d9e7;
+}
+.logo{
+    float: left;
+}
+.nav{
+    list-style: none;
+}
+.nav li{
+    display: inline-block;
+    text-align: center;
+}
+.nav li a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    padding-top: 8px;
+    position: relative;
+    transition: 0.7s;
+}
+.nav li a::after{
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(45deg, #138edb, #c2d9e7);
+    display: block;
+    z-index: -1;
+    border-radius: 5px;
+}
+.nav li a:hover::after{
+    width: 100%;
+}
+.clear{
+    clear: both;
+}
+/* End header style........................... */
+/* Start loading style................ */
+.load{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 300px;
+    transition: all 0.7s;
+}
+.load ul{
+    list-style: none;
+    margin-left: auto;
+    width: 150px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.load ul .load-list{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(51, 167, 181);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.load ul .two{
+    animation-delay: 0.3s;
+}
+.load ul .three{
+    animation-delay: 0.6s;
+}
+@keyframes load{
+    to{
+        opacity: .3;
+        transform: translateY(-20px);
+    }
+}
+.load:hover .load-list{
+    display: none;
+}
+/* End loading style................ */
+/* Start animation section............... */
+section .content{
+    position: relative;
+    min-height: 79vh;
+    border: 2px solid #16567e;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px #16567e;
+}
+h2{
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 5px solid #138edb;
+    border-top: transparent;
+    padding-bottom: 10px;
+    width: 50%;
+    margin: 0 auto 50px auto;
+    border-radius: 50px;
+}
+h2:hover{
+    color: #ff5722;
+    transition: .7s;
+}
+.reader-name{
+    width: 25%;
+    background-color: #138edb;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    transition: all 0.7s;
+    position: absolute;
+    box-shadow: 0px 0px 5px #138edb;
+}
+.reader-name:hover{
+    animation-play-state: paused;
+}
+.reader-name:hover .reader-name a{
+    color: #ff5722;
+}
+.name1, .name3, .name5, .name7{
+    left: 0;
+    animation-name: left;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.name2, .name4, .name6, .name8{
+    right: 0;
+    animation-name: right;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.name1{
+    top: 0;
+}
+.name2{
+    top: 10vh;
+    animation-delay: 3s; 
+}
+.name3{
+    top: 20vh;
+    animation-delay: 6s;
+}
+.name4{
+    top: 30vh;
+    animation-delay: 9s;
+}
+.name5{
+    top: 40vh;
+    animation-delay: 12s;
+}
+.name6{
+    top: 50vh;
+    animation-delay: 15s;;
+}
+.name7{
+    top: 60vh;
+    animation-delay: 18s;
+}
+.name8{
+    top: 70vh;
+    animation-delay: 21s;
+}
+.reader-name a{
+    color: #fff;
+    text-decoration: none;
+}
+.reader-name i{
+    margin-right: 7px;
+}
+.reader-name:hover .reader-name a{
+    color: #ff5722;
+    opacity: .6;
+}
+@keyframes left{
+    to{
+        left: 75%;
+    }
+}
+@keyframes right{
+    to{
+        right: 75%;
+    }
+}
+/* End animation section............... */
